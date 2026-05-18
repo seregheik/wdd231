@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cityville Chamber of Commerce Directory - Discover local businesses and organizations in our community.">
+    <meta name="author" content="Osasere Ikponmwosa">
+    <title>Business Directory | Cityville Chamber of Commerce</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Business Directory | Cityville Chamber of Commerce">
+    <meta property="og:description" content="Discover local businesses and organizations in the Cityville community.">
+    <meta property="og:image" content="https://seregheik.github.io/wdd231/chamber/images/favicon.png">
+    <meta property="og:url" content="https://seregheik.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/larger.css">
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/directory.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo-container">
+                <img src="images/favicon.png" alt="Cityville Chamber Logo">
+                <span class="site-name">Cityville Chamber</span>
+            </div>
+            <button id="menu" aria-label="Menu" aria-expanded="false">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html" class="active">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Business Directory</h1>
+        
+        <div class="view-toggles">
+            <button id="grid-view" class="active" aria-label="Grid View">Grid</button>
+            <button id="list-view" aria-label="List View">List</button>
+        </div>
+
+        <div id="members-container">
+            <!-- Members will be dynamically injected here by JS -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p><strong>Cityville Chamber of Commerce</strong></p>
+                <p>123 Chamber Ave</p>
+                <p>Cityville, State 12345</p>
+                <p>Email: info@cityvillechamber.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="dev-info">
+                <p>Osasere Ikponmwosa</p>
+                <p>WDD 231 Web Frontend Development I</p>
+                <p>&copy; <span id="currentyear"></span> Cityville Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

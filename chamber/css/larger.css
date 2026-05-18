@@ -1,0 +1,114 @@
+/* Desktop/Tablet styles (larger.css) */
+
+@media (min-width: 768px) {
+  /* Header & Navigation */
+  .header-inner {
+    padding: 1rem 2rem;
+  }
+
+  #menu {
+    display: none; /* Hide hamburger */
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    background: none;
+    border: none;
+  }
+
+  .navigation a {
+    border: none;
+    padding: 1.5rem 1rem;
+    position: relative;
+  }
+
+  .navigation a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: var(--accent-color);
+    transition: width var(--transition-speed);
+    border-radius: 3px 3px 0 0;
+  }
+
+  .navigation a:hover::after,
+  .navigation a.active::after {
+    width: 80%;
+  }
+
+  .navigation a:hover,
+  .navigation a.active {
+    background-color: transparent;
+  }
+
+  /* Main Content Layout */
+  main {
+    padding: 3rem 2rem;
+  }
+
+  .page-title {
+    font-size: 3rem;
+  }
+
+  /* Grid View Layout */
+  #members-container:not(.list-view) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  /* List View Layout for Desktop */
+  #members-container.list-view .member-card {
+    display: grid;
+    grid-template-columns: 80px 2fr 3fr 2fr auto;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+  }
+
+  #members-container.list-view .member-card p {
+    display: block; /* Show details on desktop */
+  }
+
+  #members-container.list-view .member-card p.desc {
+    display: none; /* Hide full description in list view to keep it clean */
+  }
+
+  #members-container.list-view .member-card .member-level {
+    display: inline-block;
+  }
+
+  /* Footer Layout */
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .dev-info {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+    border-left: 1px solid var(--border-color);
+    padding-left: 2rem;
+    text-align: left;
+  }
+
+  .contact-info {
+    text-align: right;
+    padding-right: 2rem;
+  }
+}

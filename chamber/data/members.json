@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Nova Solutions",
+    "address": "120 Tech Boulevard, Innovation District, Cityville",
+    "phone": "(555) 123-4567",
+    "website": "https://www.novasolutions.dev",
+    "image": "images/logo_tech.png",
+    "membershipLevel": 3,
+    "description": "Leading software development and IT consulting firm specializing in cloud infrastructure."
+  },
+  {
+    "name": "Golden Hearth Bakery",
+    "address": "45 Artisan Way, Old Town, Cityville",
+    "phone": "(555) 234-5678",
+    "website": "https://www.goldenhearthbakery.com",
+    "image": "images/logo_bakery.png",
+    "membershipLevel": 1,
+    "description": "Artisanal bakery offering fresh breads, pastries, and custom cakes baked daily."
+  },
+  {
+    "name": "Apex Financial Advisors",
+    "address": "1 Financial Plaza, Suite 400, Downtown, Cityville",
+    "phone": "(555) 345-6789",
+    "website": "https://www.apexfinancial.com",
+    "image": "images/logo_finance.png",
+    "membershipLevel": 3,
+    "description": "Comprehensive financial planning and wealth management for individuals and businesses."
+  },
+  {
+    "name": "Brew & Co.",
+    "address": "88 Coffee Bean Row, Midtown, Cityville",
+    "phone": "(555) 456-7890",
+    "website": "https://www.brewandco.cafe",
+    "image": "images/logo_coffee.png",
+    "membershipLevel": 2,
+    "description": "Local coffee roaster and cafe dedicated to ethically sourced, premium coffee."
+  },
+  {
+    "name": "Urban Edge Boutique",
+    "address": "210 Fashion Avenue, Westend, Cityville",
+    "phone": "(555) 567-8901",
+    "website": "https://www.urbanedgeboutique.shop",
+    "image": "images/logo_retail.png",
+    "membershipLevel": 1,
+    "description": "Modern urban clothing and accessories for the style-conscious individual."
+  },
+  {
+    "name": "Velocity Fitness",
+    "address": "500 Wellness Parkway, Eastside, Cityville",
+    "phone": "(555) 678-9012",
+    "website": "https://www.velocityfitness.gym",
+    "image": "images/logo_fitness.png",
+    "membershipLevel": 2,
+    "description": "State-of-the-art gym with personal training, group classes, and modern equipment."
+  },
+  {
+    "name": "Summit Consulting Group",
+    "address": "75 Corporate Center, Downtown, Cityville",
+    "phone": "(555) 789-0123",
+    "website": "https://www.summitconsulting.biz",
+    "image": "images/logo_consulting.png",
+    "membershipLevel": 3,
+    "description": "Strategic business consulting aimed at scaling and optimizing enterprise operations."
+  }
+]
