@@ -111,4 +111,44 @@
     text-align: right;
     padding-right: 2rem;
   }
+
+  /* --- Home Page Specific Styles --- */
+  .home-main {
+    padding: 0;
+  }
+
+  .home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "events weather"
+      "events forecast"
+      "spotlights spotlights";
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+
+  .events-card {
+    grid-area: events;
+  }
+
+  .weather-card {
+    grid-area: weather;
+  }
+
+  .forecast-card {
+    grid-area: forecast;
+  }
+
+  .spotlights {
+    grid-area: spotlights;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .spotlight-card {
+    flex: 1 1 calc(33.333% - 2rem);
+    min-width: 250px;
+  }
 }

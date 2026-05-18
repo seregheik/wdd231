@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cityville Chamber of Commerce Home - Fostering networking and advocating on behalf of the community.">
+    <meta name="author" content="Osasere Ikponmwosa">
+    <title>Home | Cityville Chamber of Commerce</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Home | Cityville Chamber of Commerce">
+    <meta property="og:description" content="Fostering networking and advocating on behalf of the community.">
+    <meta property="og:image" content="https://seregheik.github.io/wdd231/chamber/images/favicon.png">
+    <meta property="og:url" content="https://seregheik.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/larger.css">
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/home.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo-container">
+                <img src="images/favicon.png" alt="Cityville Chamber Logo">
+                <span class="site-name">Cityville Chamber</span>
+            </div>
+            <div class="header-controls">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">🌓</button>
+                <button id="menu" aria-label="Menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+        <nav class="navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+
+    <main class="home-main">
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero.png" media="(min-width: 768px)">
+                <img src="images/hero.png" alt="Cityville Downtown Aerial View" width="1200" height="675">
+            </picture>
+            <div class="hero-overlay">
+                <h2>Welcome to Cityville</h2>
+                <p>Empowering businesses to thrive and communities to grow.</p>
+                <a href="#" class="cta-button">Keynote Tickets</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <section class="events-card card">
+                <h3>Events</h3>
+                <ul class="event-list">
+                    <li>
+                        <strong>Business Luncheon</strong>
+                        <p>Oct 15, 2026 - 12:00 PM</p>
+                    </li>
+                    <li>
+                        <strong>Tech Mixer 2026</strong>
+                        <p>Oct 22, 2026 - 6:00 PM</p>
+                    </li>
+                    <li>
+                        <strong>Cityville Marathon Sponsor Drive</strong>
+                        <p>Nov 5, 2026 - 8:00 AM</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="weather-card card">
+                <h3>Current Weather</h3>
+                <div class="weather-info">
+                    <div class="weather-icon">
+                        <span style="font-size: 3rem;">⛅</span>
+                        <p class="temp">75&deg; F</p>
+                    </div>
+                    <div class="weather-details">
+                        <p><strong>Party Cloudy</strong></p>
+                        <p>High: 85&deg;</p>
+                        <p>Low: 52&deg;</p>
+                        <p>Humidity: 34%</p>
+                        <p>Sunrise: 7:30am</p>
+                        <p>Sunset: 9:59pm</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="forecast-card card">
+                <h3>Weather Forecast</h3>
+                <ul class="forecast-list">
+                    <li>Today: <strong>90&deg;F</strong></li>
+                    <li>Wednesday: <strong>89&deg;F</strong></li>
+                    <li>Thursday: <strong>68&deg;F</strong></li>
+                </ul>
+            </section>
+
+            <div id="spotlight-container" class="spotlights">
+                <!-- Spotlights injected by JS -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p><strong>Cityville Chamber of Commerce</strong></p>
+                <p>123 Chamber Ave</p>
+                <p>Cityville, State 12345</p>
+                <p>Email: info@cityvillechamber.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="dev-info">
+                <p>Osasere Ikponmwosa</p>
+                <p>WDD 231 Web Frontend Development I</p>
+                <p>&copy; <span id="currentyear"></span> Cityville Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
