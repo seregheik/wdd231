@@ -7,43 +7,67 @@
     <meta name="description" content="This is a chamber of commerce project">
     <meta name="author" content="Osasere Ikponmwosa">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Chamber Project</title>
 </head>
 <body>
     <header>
-        <img src="images/chamber-of-commerce-1.svg" alt="Chamber of commerce logo">
-        <span>Chamber of Commerce</span>
+        <div class="header-top">
+            <img src="images/chamber-of-commerce-1.svg" alt="Chamber of commerce logo" class="logo">
+            <span class="site-name">Site Name</span>
+        </div>
         <nav>
-            <a href="#">Home</a>
+            <a href="#" class="active">Home</a>
             <a href="#">Chamber Project</a>
             <a href="#">Final Project</a>
         </nav>
     </header>
     <main>
         <h1>Home</h1>
-        <section>
-            <h2>About Me</h2>
-        </section>
-        <section>
-            <h2>Student Profile</h2>
-        </section>
-        <section>
+        <div class="main-grid">
+            <section class="about-me">
+                <h2>About Me</h2>
+                <div class="section-content">
+                    <p>Massa Facilisis Per Purus Si Imperdiet Curae Amet. Et Fames Lorem Mi Phasellus Congue Nascetur Enim Consectetur Sociosqu Natoque Risus. Odio Vehicula Libero Nisl Viverra Augue Commodo Pretium Vivamus At Duis Magna. Quam Fringilla Convallis Ridiculus Malesuada Accumsan Potenti Magnis Volutpat Nulla Ipsum. Dis Maecenas Et Praesent Class Fringilla.</p>
+                </div>
+            </section>
+            <section class="student-profile">
+                <h2>Student Photo</h2>
+                <div class="section-content">
+                    <div class="photo-placeholder"></div>
+                </div>
+            </section>
+        </div>
+        <section class="web-certificate">
             <h2>Web Certificate Courses</h2>
+            <div class="section-content">
+                <div class="filter-buttons">
+                    <button>All</button>
+                    <button>CSE</button>
+                    <button>WDD</button>
+                </div>
+                <div class="course-list">
+                    <div class="course">WDD 130</div>
+                    <div class="course">WDD 131</div>
+                    <div class="course">WDD 231</div>
+                </div>
+                <p class="credits-info">The total credits for course listed above is 6</p>
+            </div>
         </section>
     </main>
     <footer>
-        <div>
-            <img src="/images/linkedin.svg" alt="linkedin">
-            <img src="/images/github.svg" alt="github">
-            <img src="/images/x.svg" alt="x formerly twitter">
+        <div class="social-icons">
+            <img src="images/linkedin.svg" alt="linkedin">
+            <img src="images/github.svg" alt="github">
+            <img src="images/x.svg" alt="x formerly twitter">
         </div>
-        <div>
-            <span id="currentyear"></span>
-            <span>Osasere Ikponmwosa</span>
-            <span>Nigeria</span>
+        <div class="footer-info">
+            <span>&copy; <span id="currentyear">202X</span></span>
+            <span>Student Name</span>
+            <span>Utah, USA</span>
         </div>
-        <div id="lastModified">
+        <div class="last-modified">
+            Last Modification: <span id="lastModified">04/18/202X 15:14:48</span>
         </div>
     </footer>
 </body>
