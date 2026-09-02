@@ -8,6 +8,7 @@
     <meta name="author" content="Osasere Ikponmwosa">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/courseList.js" defer></script>
     <script src="scripts/scripts.js" defer></script>
     <title>Chamber Project</title>
 </head>
@@ -46,16 +47,13 @@
             <h2>Web Certificate Courses</h2>
             <div class="section-content">
                 <div class="filter-buttons">
-                    <button>All</button>
-                    <button>CSE</button>
-                    <button>WDD</button>
+                    <button id="btn-all">All</button>
+                    <button id="btn-cse">CSE</button>
+                    <button id="btn-wdd">WDD</button>
                 </div>
-                <div class="course-list">
-                    <div class="course">WDD 130</div>
-                    <div class="course">WDD 131</div>
-                    <div class="course">WDD 231</div>
+                <div id="course-list" class="course-list">
                 </div>
-                <p class="credits-info">The total credits for course listed above is 6</p>
+                <p id="credits-info" class="credits-info"></p>
             </div>
         </section>
     </main>
