@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Responsive menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const nav = document.querySelector('nav');
 
@@ -10,4 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
             menuBtn.innerHTML = '&#9776;';
         }
     });
+
+    // Output current year
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+
+    // Output last modified date
+    document.getElementById('lastModified').textContent = document.lastModified;
 });
