@@ -23,7 +23,13 @@ body {
 .header-top {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 1rem 2rem;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
 }
 
 .logo {
@@ -34,6 +40,16 @@ body {
 .site-name {
     margin-left: 1rem;
     font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    background-color: #ccc;
+    border: 1px solid #999;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
     font-weight: bold;
 }
 
@@ -55,7 +71,6 @@ nav a:hover, nav a.active {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Main Content */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -177,10 +192,34 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .header-top {
+        padding: 1rem;
+    }
+    .menu-btn {
+        display: block;
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+    }
+    nav.open {
+        display: flex;
+    }
+    nav a {
+        padding: 1rem;
+        border-bottom: 1px solid #111;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    nav a:first-child {
+        border-top: 1px solid #111;
+    }
     .main-grid {
         grid-template-columns: 1fr;
     }
-    .filter-buttons, .course-list {
+    .course-list {
         flex-direction: column;
     }
 }
