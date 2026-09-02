@@ -119,6 +119,13 @@ section h2 {
     display: block;
 }
 
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 /* Web Certificate Section */
 .filter-buttons {
     display: flex;
