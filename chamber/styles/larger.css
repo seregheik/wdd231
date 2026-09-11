@@ -80,7 +80,7 @@
         width: 80px;
     }
 
-    .list-layout .member-card h3 {
+    .list-layout .member-card h2 {
         flex: 1;
         margin-bottom: 0;
     }

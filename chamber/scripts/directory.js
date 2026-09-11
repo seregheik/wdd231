@@ -85,7 +85,7 @@ function displayMembers(members) {
         logo.setAttribute("width", "150");
         logo.setAttribute("height", "150");
         
-        let name = document.createElement("h3");
+        let name = document.createElement("h2");
         name.textContent = member.name;
         
         let address = document.createElement("p");
