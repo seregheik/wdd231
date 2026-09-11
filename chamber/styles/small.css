@@ -89,6 +89,7 @@ header {
 /* Main Content Styles */
 main {
     padding: 1rem;
+    min-height: 60vh; /* Prevents layout shift (CLS) when loading members dynamically */
 }
 
 .directory-header {
