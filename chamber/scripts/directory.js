@@ -1,16 +1,13 @@
-// Update the current year in the footer
 const currentYearSpan = document.getElementById("currentyear");
 if (currentYearSpan) {
     currentYearSpan.textContent = new Date().getFullYear();
 }
 
-// Update the last modified date in the footer
 const lastModifiedSpan = document.getElementById("lastModified");
 if (lastModifiedSpan) {
     lastModifiedSpan.textContent = document.lastModified;
 }
 
-// Toggle Grid/List views
 const gridBtn = document.getElementById("grid-view");
 const listBtn = document.getElementById("list-view");
 const membersContainer = document.getElementById("members-container");
@@ -31,7 +28,6 @@ if (gridBtn && listBtn && membersContainer) {
     });
 }
 
-// Hamburger Menu Toggle
 const hamburger = document.getElementById("hamburger");
 const primaryNavUl = document.querySelector("#primary-nav ul");
 
@@ -40,7 +36,6 @@ if (hamburger && primaryNavUl) {
         primaryNavUl.classList.toggle("open");
         hamburger.classList.toggle("open");
         
-        // Change button symbol based on state
         if (primaryNavUl.classList.contains("open")) {
             hamburger.innerHTML = "✖";
         } else {
@@ -49,7 +44,6 @@ if (hamburger && primaryNavUl) {
     });
 }
 
-// Fetch and display members
 const url = 'data/members.json';
 
 async function getMembersData() {
@@ -69,9 +63,8 @@ async function getMembersData() {
 function displayMembers(members) {
     if (!membersContainer) return;
     
-    membersContainer.innerHTML = ""; // Clear any existing content
+    membersContainer.innerHTML = "";
     
-    // Create a DocumentFragment to minimize DOM reflows and reduce TBT
     const fragment = document.createDocumentFragment();
     
     members.forEach((member) => {
@@ -118,9 +111,7 @@ function displayMembers(members) {
         fragment.appendChild(card);
     });
     
-    // Append all cards at once to the actual DOM
     membersContainer.appendChild(fragment);
 }
 
-// Initial fetch
 getMembersData();

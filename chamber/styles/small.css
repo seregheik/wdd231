@@ -1,4 +1,3 @@
-/* Color Variables */
 :root {
     --primary-color: #004d99;
     --secondary-color: #ffcc00;
@@ -9,7 +8,6 @@
     --footer-text: #ffffff;
 }
 
-/* Basic Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,7 +21,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styles (Mobile First) */
 header {
     background-color: var(--header-bg);
     padding: 1rem;
@@ -57,10 +54,9 @@ header {
     color: var(--primary-color);
 }
 
-/* Mobile Navigation */
 #primary-nav ul {
     list-style: none;
-    display: none; /* hidden by default, shown by JS */
+    display: none;
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 1rem;
@@ -86,10 +82,9 @@ header {
     color: #fff;
 }
 
-/* Main Content Styles */
 main {
     padding: 1rem;
-    min-height: 2000px; /* Prevents layout shift (CLS) on mobile when loading 7 cards */
+    min-height: 2000px;
 }
 
 .directory-header {
@@ -119,7 +114,6 @@ h1 {
     border-color: var(--primary-color);
 }
 
-/* Footer Styles */
 footer {
     background-color: var(--footer-bg);
     color: var(--footer-text);
@@ -147,7 +141,6 @@ footer {
     margin: 0.3rem 0;
 }
 
-/* Directory Members Grid & List Views */
 .grid-layout {
     display: grid;
     grid-template-columns: 1fr;
