@@ -67,14 +67,21 @@ function displayMembers(members) {
     
     const fragment = document.createDocumentFragment();
     
-    members.forEach((member) => {
+    members.forEach((member, index) => {
         let card = document.createElement("section");
         card.classList.add("member-card");
         
         let logo = document.createElement("img");
         logo.setAttribute("src", `images/${member.image}`);
         logo.setAttribute("alt", `${member.name} Logo`);
-        logo.setAttribute("loading", "lazy");
+        
+        // Optimize LCP: do not lazy-load the first image, and give it high fetch priority
+        if (index === 0) {
+            logo.setAttribute("fetchpriority", "high");
+        } else {
+            logo.setAttribute("loading", "lazy");
+        }
+        
         logo.setAttribute("width", "150");
         logo.setAttribute("height", "150");
         
