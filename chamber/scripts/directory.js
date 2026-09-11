@@ -71,6 +71,9 @@ function displayMembers(members) {
     
     membersContainer.innerHTML = ""; // Clear any existing content
     
+    // Create a DocumentFragment to minimize DOM reflows and reduce TBT
+    const fragment = document.createDocumentFragment();
+    
     members.forEach((member) => {
         let card = document.createElement("section");
         card.classList.add("member-card");
@@ -112,8 +115,11 @@ function displayMembers(members) {
         card.appendChild(website);
         card.appendChild(level);
         
-        membersContainer.appendChild(card);
+        fragment.appendChild(card);
     });
+    
+    // Append all cards at once to the actual DOM
+    membersContainer.appendChild(fragment);
 }
 
 // Initial fetch

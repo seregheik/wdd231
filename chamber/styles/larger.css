@@ -39,6 +39,7 @@
     main {
         max-width: 1200px;
         margin: 2rem auto;
+        min-height: 60vh; /* Reset from mobile's 2000px */
     }
 
     .directory-header {
