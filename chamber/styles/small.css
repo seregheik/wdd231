@@ -1,0 +1,202 @@
+/* Color Variables */
+:root {
+    --primary-color: #004d99;
+    --secondary-color: #ffcc00;
+    --bg-color: #fcfcfc;
+    --text-color: #333333;
+    --header-bg: #ffffff;
+    --footer-bg: #002244;
+    --footer-text: #ffffff;
+}
+
+/* Basic Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+/* Header Styles (Mobile First) */
+header {
+    background-color: var(--header-bg);
+    padding: 1rem;
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.site-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.header-actions button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Mobile Navigation */
+#primary-nav ul {
+    list-style: none;
+    display: none; /* hidden by default, shown by JS */
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#primary-nav ul.open {
+    display: flex;
+}
+
+#primary-nav a {
+    display: block;
+    padding: 0.8rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    background-color: #e6f0fa;
+    border-radius: 4px;
+}
+
+#primary-nav a.active, #primary-nav a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Main Content Styles */
+main {
+    padding: 1rem;
+}
+
+.directory-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+.view-toggles button {
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.view-toggles button.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social img {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.footer-dev p {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+
+/* Directory Members Grid & List Views */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.list-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.member-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.member-card img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.member-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.member-card p {
+    margin-bottom: 0.5rem;
+}
+
+.member-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.member-card a:hover {
+    text-decoration: underline;
+}
+
+.list-layout .member-card {
+    text-align: left;
+}

@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Timbuktu Tech Solutions",
+        "address": "12 Innovation Ave, Timbuktu, Mali 999",
+        "phone": "(223) 555-0101",
+        "website": "https://timbuktutech.example.com",
+        "image": "logo-tech.svg",
+        "membershipLevel": 3,
+        "industry": "Information Technology"
+    },
+    {
+        "name": "Sahara Oasis Cafe",
+        "address": "45 Market St, Timbuktu, Mali 999",
+        "phone": "(223) 555-0202",
+        "website": "https://saharacafe.example.com",
+        "image": "logo-cafe.svg",
+        "membershipLevel": 1,
+        "industry": "Food & Beverage"
+    },
+    {
+        "name": "Desert Winds Logistics",
+        "address": "88 Trade Route Blvd, Timbuktu, Mali 999",
+        "phone": "(223) 555-0303",
+        "website": "https://desertwinds.example.com",
+        "image": "logo-logistics.svg",
+        "membershipLevel": 2,
+        "industry": "Transportation"
+    },
+    {
+        "name": "Mali Sun Solar",
+        "address": "100 Energy Way, Timbuktu, Mali 999",
+        "phone": "(223) 555-0404",
+        "website": "https://malisun.example.com",
+        "image": "logo-solar.svg",
+        "membershipLevel": 3,
+        "industry": "Renewable Energy"
+    },
+    {
+        "name": "Ancient Texts Bookstore",
+        "address": "15 Heritage Square, Timbuktu, Mali 999",
+        "phone": "(223) 555-0505",
+        "website": "https://ancienttexts.example.com",
+        "image": "logo-bookstore.svg",
+        "membershipLevel": 1,
+        "industry": "Retail"
+    },
+    {
+        "name": "Oasis Wealth Management",
+        "address": "22 Financial Dist, Timbuktu, Mali 999",
+        "phone": "(223) 555-0606",
+        "website": "https://oasiswealth.example.com",
+        "image": "logo-wealth.svg",
+        "membershipLevel": 3,
+        "industry": "Finance"
+    },
+    {
+        "name": "Timbuktu Artisans",
+        "address": "5 Craft Lane, Timbuktu, Mali 999",
+        "phone": "(223) 555-0707",
+        "website": "https://timbuktuartisans.example.com",
+        "image": "logo-artisans.svg",
+        "membershipLevel": 2,
+        "industry": "Arts & Crafts"
+    }
+]
