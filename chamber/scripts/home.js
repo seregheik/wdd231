@@ -1,7 +1,5 @@
-// Get a free key at https://home.openweathermap.org/api_keys
-const API_KEY = "YOUR_OPENWEATHERMAP_API_KEY";
+const API_KEY = "ed3886c7a4a73beb29c48b0649978e2d";
 
-// Timbuktu, Mali
 const LAT = 16.7735;
 const LON = -3.0074;
 
@@ -25,7 +23,6 @@ function capitalize(text) {
     return text.replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
-// ---------- Weather ----------
 
 function displayCurrentWeather(data) {
     const weather = data.weather[0];
@@ -33,7 +30,7 @@ function displayCurrentWeather(data) {
     currentWeather.innerHTML = "";
 
     const icon = document.createElement("img");
-    icon.setAttribute("src", `https://openweathermap.org/img/wn/${weather.icon}@2x.png`);
+    icon.setAttribute("src", `https://openweathermap.org/img/wn/${weather.icon}@4x.png`);
     icon.setAttribute("alt", weather.description);
     icon.setAttribute("width", "100");
     icon.setAttribute("height", "100");
@@ -53,11 +50,12 @@ function displayCurrentWeather(data) {
 
 function displayForecast(data) {
     const offset = data.city.timezone;
+    const toLocalDate = (seconds) => new Date((seconds + offset) * 1000).toISOString().slice(0, 10);
+    const today = toLocalDate(Math.floor(Date.now() / 1000));
     const days = new Map();
 
-    // Group the 3-hour forecast entries by local date and keep each day's high
     data.list.forEach((entry) => {
-        const date = new Date((entry.dt + offset) * 1000).toISOString().slice(0, 10);
+        const date = toLocalDate(entry.dt);
         const high = entry.main.temp_max;
         if (!days.has(date) || high > days.get(date)) {
             days.set(date, high);
@@ -66,8 +64,8 @@ function displayForecast(data) {
 
     forecastList.innerHTML = "";
 
-    [...days].slice(0, 3).forEach(([date, high], index) => {
-        const label = index === 0
+    [...days].slice(0, 3).forEach(([date, high]) => {
+        const label = date === today
             ? "Today"
             : new Date(`${date}T12:00:00Z`).toLocaleDateString("en-US", { weekday: "long", timeZone: "UTC" });
 
@@ -92,7 +90,6 @@ async function getWeather() {
     }
 }
 
-// ---------- Member spotlights ----------
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -131,7 +128,7 @@ function displaySpotlights(members) {
         website.setAttribute("href", member.website);
         website.setAttribute("target", "_blank");
         website.setAttribute("rel", "noopener");
-        website.textContent = "Website";
+        website.textContent = new URL(member.website).hostname;
 
         const level = document.createElement("p");
         level.classList.add("membership-level");
