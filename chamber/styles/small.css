@@ -302,6 +302,10 @@ main.join {
     gap: 1.5rem;
 }
 
+.join-form {
+    border-radius: 4px;
+}
+
 .form-note {
     font-size: 0.9rem;
     margin-bottom: 1rem;
@@ -365,7 +369,7 @@ main.join {
     background-color: #fff;
     border: 1px solid #ddd;
     border-left: 8px solid var(--primary-color);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 1rem 1.5rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     animation: card-enter 0.8s ease-out both;
@@ -409,7 +413,7 @@ dialog {
     color: var(--text-color);
     border: none;
     border-top: 6px solid var(--primary-color);
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
