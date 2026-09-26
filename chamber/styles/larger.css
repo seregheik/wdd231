@@ -90,4 +90,34 @@
         margin-top: 0;
         margin-right: 1.5rem;
     }
+
+    /* ---------- Home page ---------- */
+
+    main.home {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero, .spotlights {
+        grid-column: 1 / -1;
+    }
+
+    .hero-content {
+        left: auto;
+        right: 2rem;
+        bottom: 2rem;
+        padding: 1.5rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 0.8rem 2rem;
+    }
+
+    #spotlight-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

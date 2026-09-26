@@ -1,13 +1,3 @@
-const currentYearSpan = document.getElementById("currentyear");
-if (currentYearSpan) {
-    currentYearSpan.textContent = new Date().getFullYear();
-}
-
-const lastModifiedSpan = document.getElementById("lastModified");
-if (lastModifiedSpan) {
-    lastModifiedSpan.textContent = document.lastModified;
-}
-
 const gridBtn = document.getElementById("grid-view");
 const listBtn = document.getElementById("list-view");
 const membersContainer = document.getElementById("members-container");
@@ -25,22 +15,6 @@ if (gridBtn && listBtn && membersContainer) {
         membersContainer.classList.remove("grid-layout");
         listBtn.classList.add("active");
         gridBtn.classList.remove("active");
-    });
-}
-
-const hamburger = document.getElementById("hamburger");
-const primaryNavUl = document.querySelector("#primary-nav ul");
-
-if (hamburger && primaryNavUl) {
-    hamburger.addEventListener("click", () => {
-        primaryNavUl.classList.toggle("open");
-        hamburger.classList.toggle("open");
-        
-        if (primaryNavUl.classList.contains("open")) {
-            hamburger.innerHTML = "✖";
-        } else {
-            hamburger.innerHTML = "☰";
-        }
     });
 }
 
@@ -99,14 +73,9 @@ function displayMembers(members) {
         website.setAttribute("target", "_blank");
         website.textContent = "Website";
         
-        let levelText = "";
-        if (member.membershipLevel === 1) levelText = "Member";
-        else if (member.membershipLevel === 2) levelText = "Silver";
-        else if (member.membershipLevel === 3) levelText = "Gold";
-        
         let level = document.createElement("p");
         level.classList.add("membership-level");
-        level.textContent = `Level: ${levelText}`;
+        level.textContent = `Level: ${getMembershipLevelText(member.membershipLevel)}`;
         
         card.appendChild(logo);
         card.appendChild(name);
