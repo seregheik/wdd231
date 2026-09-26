@@ -120,4 +120,40 @@
     #spotlight-container {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    #members-container {
+        min-height: auto;
+    }
+
+    /* ---------- Join page ---------- */
+
+    main.join {
+        grid-template-columns: 3fr 2fr;
+        align-items: start;
+    }
+
+    main.join h1 {
+        grid-column: 1 / -1;
+    }
+
+    .submit-button {
+        width: auto;
+        padding: 0.8rem 2.5rem;
+    }
+
+    /* ---------- Thank you page ---------- */
+
+    #application-details {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #application-details dt {
+        margin-top: 0;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #application-details dd {
+        padding: 0.5rem 0;
+    }
 }

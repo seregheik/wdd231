@@ -84,6 +84,11 @@ header {
 
 main {
     padding: 1rem;
+    min-height: 60vh;
+}
+
+/* Reserve space for the dynamically loaded directory cards to avoid layout shift */
+#members-container {
     min-height: 2000px;
 }
 
@@ -198,7 +203,6 @@ footer {
 /* ---------- Home page ---------- */
 
 main.home {
-    min-height: auto;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -288,4 +292,179 @@ main.home {
 
 .list-layout .member-card {
     text-align: left;
+}
+
+/* ---------- Join page ---------- */
+
+main.join {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.form-note {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.join-form form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+    display: block;
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0.6rem;
+    font: inherit;
+    font-weight: normal;
+    color: var(--text-color);
+    background-color: #fff;
+    border: 1px solid #767676;
+    border-radius: 4px;
+}
+
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+    outline: 3px solid var(--secondary-color);
+    border-color: var(--primary-color);
+}
+
+.submit-button {
+    width: 100%;
+    padding: 0.8rem;
+    font: inherit;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: var(--footer-bg);
+}
+
+.membership-levels {
+    display: grid;
+    gap: 1rem;
+}
+
+.membership-levels h2 {
+    color: var(--primary-color);
+}
+
+.membership-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-left: 8px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    animation: card-enter 0.8s ease-out both;
+}
+
+.membership-card.np { border-left-color: #2e7d32; }
+.membership-card.bronze { border-left-color: #a0522d; animation-delay: 0.2s; }
+.membership-card.silver { border-left-color: #8a8a8a; animation-delay: 0.4s; }
+.membership-card.gold { border-left-color: #d4a017; animation-delay: 0.6s; }
+
+.membership-card h3 {
+    color: var(--primary-color);
+}
+
+.membership-card a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+@keyframes card-enter {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .membership-card {
+        animation: none;
+    }
+}
+
+dialog {
+    width: min(90vw, 480px);
+    margin: auto;
+    padding: 1.5rem;
+    color: var(--text-color);
+    border: none;
+    border-top: 6px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog h3 {
+    color: var(--primary-color);
+}
+
+dialog .price {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+dialog ul {
+    margin: 0 0 1rem 1.25rem;
+}
+
+.close-modal {
+    padding: 0.5rem 1.25rem;
+    font: inherit;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ---------- Thank you page ---------- */
+
+main.thankyou .card {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+main.thankyou h2 {
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.5rem;
+}
+
+#application-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 1.5rem;
+}
+
+#application-details dt {
+    font-weight: bold;
+    margin-top: 0.75rem;
+}
+
+#application-details dd {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    overflow-wrap: anywhere;
 }
