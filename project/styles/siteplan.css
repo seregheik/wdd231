@@ -1,0 +1,176 @@
+:root {
+    --chili: #A4161A;
+    --saffron: #F4A300;
+    --cream: #FFF8EE;
+    --charcoal: #2B2B2B;
+    --heading-font: 'Poppins', Arial, sans-serif;
+    --body-font: 'Nunito Sans', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--charcoal);
+    background-color: var(--cream);
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    line-height: 1.25;
+}
+
+h2 {
+    color: var(--chili);
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid var(--saffron);
+    display: inline-block;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+code {
+    font-size: 0.95em;
+}
+
+header {
+    background-color: var(--chili);
+    color: var(--cream);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 8px solid var(--saffron);
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+section p, section ul, section ol {
+    margin-bottom: 0.75rem;
+}
+
+main ul, main ol {
+    padding-left: 1.25rem;
+}
+
+.scenarios li {
+    margin-bottom: 1rem;
+}
+
+.scenarios h3 {
+    font-style: italic;
+}
+
+.swatches {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.swatches li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.swatch {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border: 2px solid var(--charcoal);
+    border-radius: 4px;
+}
+
+.swatch.chili { background-color: var(--chili); }
+.swatch.saffron { background-color: var(--saffron); }
+.swatch.cream { background-color: var(--cream); }
+.swatch.charcoal { background-color: var(--charcoal); }
+
+.font-sample {
+    background-color: #fff;
+    border-left: 6px solid var(--saffron);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sample-heading {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--chili);
+}
+
+.body-font-name {
+    font-family: var(--body-font);
+}
+
+.wireframes {
+    display: grid;
+    gap: 1.5rem;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--charcoal);
+    background-color: #fff;
+}
+
+figcaption {
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+footer {
+    background-color: var(--chili);
+    color: var(--cream);
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    .swatches {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wireframes {
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+    }
+}
