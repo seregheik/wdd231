@@ -447,6 +447,7 @@ dialog ul {
 /* ---------- Discover page ---------- */
 
 .visit-message {
+    min-height: 3.6rem;
     margin: 1rem 0;
     padding: 1rem;
     font-weight: bold;
@@ -455,7 +456,9 @@ dialog ul {
     border-radius: 4px;
 }
 
+/* Reserve space for the cards loaded by JavaScript so the credits and footer don't shift */
 .places {
+    min-height: 100vh;
     display: grid;
     gap: 1.5rem;
     grid-template-areas:
