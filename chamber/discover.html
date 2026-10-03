@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osasere Chamber of Commerce - Discover</title>
+    <meta name="description" content="Discover Timbuktu with the Osasere Chamber of Commerce: historic mosques, manuscript libraries, museums, markets, and the old town.">
+    <meta name="author" content="Osasere Ikponmwosa">
+
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <meta property="og:url" content="https://seregheik.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Discover Timbuktu | Osasere Chamber of Commerce">
+    <meta property="og:description" content="Discover Timbuktu with the Osasere Chamber of Commerce: historic mosques, manuscript libraries, museums, markets, and the old town.">
+    <meta property="og:image" content="https://seregheik.github.io/wdd231/chamber/images/djinguereber-mosque.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+    <script src="scripts/common.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-box">
+                <img src="../images/chamber-of-commerce-1.svg" alt="Osasere Chamber of Commerce Logo" width="80" height="80">
+                <span class="site-name">Osasere Chamber of Commerce</span>
+            </div>
+            <div class="header-actions">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">🌓</button>
+                <button id="hamburger" aria-label="Open Menu">☰</button>
+            </div>
+        </div>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="discover">
+        <h1>Discover Timbuktu</h1>
+
+        <p id="visit-message" class="visit-message" role="status"></p>
+
+        <div id="places" class="places"></div>
+
+        <section class="photo-credits">
+            <h2>Photo Credits</h2>
+            <p>Photos from Wikimedia Commons, cropped and resized.</p>
+            <ul id="photo-credits"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-contact">
+            <h2>Osasere Chamber of Commerce</h2>
+            <p>10 Rue De La Paix</p>
+            <p>Osasere, Mali 999</p>
+            <p>info@Osaserecc.org</p>
+            <p>(223) 555-2300</p>
+        </div>
+        <div class="footer-social">
+            <a href="https://github.com/"><img src="../images/github.svg" alt="GitHub" width="40" height="40"></a>
+            <a href="https://x.com/"><img src="../images/twitter.svg" alt="Twitter" width="40" height="40"></a>
+            <a href="https://www.linkedin.com/"><img src="../images/linkedin.svg" alt="LinkedIn" width="40" height="40"></a>
+        </div>
+        <div class="footer-dev">
+            <p>WDD231 Class Project</p>
+            <p>Osasere Ikponmwosa</p>
+            <p>&copy; <span id="currentyear"></span> Osasere Chamber of Commerce</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

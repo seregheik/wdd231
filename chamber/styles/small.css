@@ -444,6 +444,182 @@ dialog ul {
     cursor: pointer;
 }
 
+/* ---------- Discover page ---------- */
+
+.visit-message {
+    margin: 1rem 0;
+    padding: 1rem;
+    font-weight: bold;
+    background-color: #e6f0fa;
+    border-left: 6px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.places {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas:
+        "p1"
+        "p2"
+        "p3"
+        "p4"
+        "p5"
+        "p6"
+        "p7"
+        "p8";
+}
+
+.place1 { grid-area: p1; }
+.place2 { grid-area: p2; }
+.place3 { grid-area: p3; }
+.place4 { grid-area: p4; }
+.place5 { grid-area: p5; }
+.place6 { grid-area: p6; }
+.place7 { grid-area: p7; }
+.place8 { grid-area: p8; }
+
+.place-card {
+    display: grid;
+    grid-template-areas:
+        "title"
+        "photo"
+        "address"
+        "description"
+        "button";
+    align-content: start;
+    gap: 0.5rem;
+    padding: 1.25rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.place-card h2 {
+    grid-area: title;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.place-card figure {
+    grid-area: photo;
+    max-width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.place-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.place-card address {
+    grid-area: address;
+    font-size: 0.9rem;
+}
+
+.place-card p {
+    grid-area: description;
+}
+
+.place-card button {
+    grid-area: button;
+    justify-self: start;
+    padding: 0.5rem 1.25rem;
+    font: inherit;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.place-card button:hover {
+    background-color: var(--footer-bg);
+}
+
+.photo-credits {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.photo-credits h2 {
+    color: var(--primary-color);
+}
+
+.photo-credits ul {
+    margin-left: 1.25rem;
+}
+
+.photo-credits a {
+    color: var(--primary-color);
+}
+
+/* Medium screens: two columns, first and last cards span the full width */
+@media (min-width: 641px) {
+    .places {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "p1 p1"
+            "p2 p3"
+            "p4 p5"
+            "p6 p7"
+            "p8 p8";
+    }
+
+    .place1, .place8 {
+        grid-template-columns: 300px 1fr;
+        grid-template-areas:
+            "photo title"
+            "photo address"
+            "photo description"
+            "photo button";
+        column-gap: 1.5rem;
+    }
+
+    .place1 figure, .place8 figure {
+        margin: 0;
+    }
+
+    /* Image hover effect (not applied on mobile) */
+    .place-card img {
+        transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .place-card figure:hover img {
+        transform: scale(1.1);
+        filter: saturate(1.4) brightness(1.05);
+    }
+}
+
+/* Large screens: three columns, featured first card spans two columns */
+@media (min-width: 1025px) {
+    .places {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "p1 p1 p2"
+            "p3 p4 p5"
+            "p6 p7 p8";
+    }
+
+    .place8 {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "photo"
+            "address"
+            "description"
+            "button";
+    }
+
+    .place8 figure {
+        margin: 0 auto;
+    }
+}
+
 /* ---------- Thank you page ---------- */
 
 main.thankyou .card {
