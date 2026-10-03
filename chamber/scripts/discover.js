@@ -6,7 +6,6 @@ const visitMessage = document.querySelector("#visit-message");
 const placesContainer = document.querySelector("#places");
 const creditsList = document.querySelector("#photo-credits");
 
-// ---------- Last visit message ----------
 
 function getVisitMessage(lastVisit, now) {
     if (!lastVisit) {
@@ -34,7 +33,6 @@ function showVisitMessage() {
     visitMessage.textContent = getVisitMessage(lastVisit, now);
 }
 
-// ---------- Places of interest ----------
 
 function displayPlaces() {
     places.forEach((place, index) => {
@@ -44,7 +42,7 @@ function displayPlaces() {
         card.innerHTML = `
             <h2>${place.name}</h2>
             <figure>
-                <img src="images/${place.image}" alt="${place.name}" width="300" height="200"${index > 1 ? ' loading="lazy"' : ""}>
+                <img src="images/${place.image}" srcset="images/${place.image} 1x, images/${place.image.replace(".webp", "-2x.webp")} 2x" alt="${place.name}" width="300" height="200"${index > 1 ? ' loading="lazy"' : ""}>
             </figure>
             <address>${place.address}</address>
             <p>${place.description}</p>
